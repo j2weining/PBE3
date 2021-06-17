@@ -2,7 +2,7 @@
     margin: 20px auto;
     max-width: 600px;
     text-align: center;
-    background-color:burlywood;
+    background-color:lightslategrey;
     border-radius: 10px;
     padding: 25px;
 } /* form1*/
@@ -11,7 +11,7 @@
     margin: 20px auto;
     max-width: 600px;
     text-align: center;
-    background-color:burlywood;
+    background-color:lightslategrey;
     border-radius: 10px;
     padding: 25px;
 } /* form2*/
@@ -60,4 +60,20 @@
     text-align: center;
     font-size: 15px;
 } /* form1 and form2 table*/
+
+.labelmark{
+    text-align: right;
+} /*set text to right*/
+
+#label{
+    background-color:palevioletred;
+} /* set background color for label*/
+
+#title{
+    background-color:lightpink;
+} /* set title background color*/
+
+#background{
+    background-color: lightsteelblue;
+} /* set background color*/
 

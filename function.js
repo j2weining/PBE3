@@ -46,10 +46,10 @@ function calmessage() {
                         document.getElementById("dismark3").innerHTML = marks3;
 
                         //set grade for subject 1
-                        if(marks1  >=81 && marks1 <=100){
+                        if(marks1  >=80 && marks1 <=100){
                             document.getElementById("disgrade").innerHTML = "A";
                         }
-                        else if(marks1 >=75 && marks1 <=80){
+                        else if(marks1 >=75 && marks1 <=79){
                             document.getElementById("disgrade").innerHTML = "A-"
                         }
                         else if(marks1 >=70 && marks1 <=74){
@@ -70,15 +70,18 @@ function calmessage() {
                         else if(marks1 >=40 && marks1 <=49){
                             document.getElementById("disgrade").innerHTML = "D"
                         }
-                        else if(marks1 =0 && marks1 <=39){
+                        else if(marks1 >=0 && marks1 <=39){
                             document.getElementById("disgrade").innerHTML = "F"
+                        }
+                        else{
+                            document.getElementById("disgrade").innerHTML = "-"
                         }
 
                         //set grade for subject 2
-                        if(marks2  >=81 && marks2 <=100){
+                        if(marks2  >=80 && marks2 <=100){
                             document.getElementById("disgrade2").innerHTML = "A";
                         }
-                        else if(marks2 >=75 && marks2 <=80){
+                        else if(marks2 >=75 && marks2 <=79){
                             document.getElementById("disgrade2").innerHTML = "A-"
                         }
                         else if(marks2 >=70 && marks2 <=74){
@@ -99,15 +102,18 @@ function calmessage() {
                         else if(marks2 >=40 && marks2 <=49){
                             document.getElementById("disgrade2").innerHTML = "D"
                         }
-                        else if(marks2 =0 && marks2 <=39){
+                        else if(marks2 >=0 && marks2 <=39){
                             document.getElementById("disgrade2").innerHTML = "F"
+                        }
+                        else{
+                            document.getElementById("disgrade2").innerHTML = "-"
                         }
 
                         //set grade for subject 3
-                        if(marks3  >=81 && marks3 <=100){
+                        if(marks3  >=80 && marks3 <=100){
                             document.getElementById("disgrade3").innerHTML = "A";
                         }
-                        else if(marks3 >=75 && marks3 <=80){
+                        else if(marks3 >=75 && marks3 <=79){
                             document.getElementById("disgrade3").innerHTML = "A-"
                         }
                         else if(marks3 >=70 && marks3 <=74){
@@ -128,15 +134,28 @@ function calmessage() {
                         else if(marks3 >=40 && marks3 <=49){
                             document.getElementById("disgrade3").innerHTML = "D"
                         }
-                        else if(marks3 =0 && marks3 <=39){
+                        else if(marks3 >=0 && marks3 <=39){
                             document.getElementById("disgrade3").innerHTML = "F"
+                        }
+                        else{
+                            document.getElementById("disgrade3").innerHTML = "-"
                         }
 
                         //calculate total
                         var totalmark;
-                        totalmark = marks1 + marks2 + marks3;
+                        totalmark = Number(marks1) + Number(marks2) + Number(marks3);
                         document.getElementById("distotal").innerHTML = totalmark;
+
+                        //calculate average
+                        var averagemark;
+                        averagemark = (Number(marks1) + Number(marks2) + Number(marks3))/3;
+                        document.getElementById("disaverage").innerHTML = averagemark;
                         
+                        // if mark less than 40 then the text color become red
+                        if (averagemark <40){
+                            document.getElementById("disaverage").style.color = "red";
+                        }
+
                     } //end check marks input
                     else{
                         alert('Please enter your marks.');
