@@ -4,9 +4,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Marks Calculator</title>
 </head>
 <body>
-    
+    <div id="form1">
+        <form method="POST" action="marks.html">
+            <table border="1" id="table" cellpadding="6" cellspacing="0">
+                <tr>
+                    <td colspan="2" id="title">
+                        STUDENT MARKS CALCULATOR
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="title">
+                        SUBJECT 1
+                    </td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="subcode">SUBJECT CODE</label></td>
+                    <td><input type="text" id="subcode" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="subname">SUBJECT NAME</label></td>
+                    <td><input type="text" id="subname" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="credit">CREDIT HOURS</label></td>
+                    <td><input type="text" id="credit" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="submark">MARKS</label></td>
+                    <td><input type="text" id="submark" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="title">
+                        SUBJECT 2
+                    </td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="subcode2">SUBJECT CODE</label></td>
+                    <td><input type="text" id="subcode2" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="subname2">SUBJECT NAME</label></td>
+                    <td><input type="text" id="subname2" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="credit2">CREDIT HOURS</label></td>
+                    <td><input type="text" id="credit2" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="submark2">MARKS</label></td>
+                    <td><input type="text" id="submark2" required></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" id="title">
+                        SUBJECT 3
+                    </td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="subcode3">SUBJECT CODE</label></td>
+                    <td><input type="text" id="subcode3" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="subname3">SUBJECT NAME</label></td>
+                    <td><input type="text" id="subname3" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="credit3">CREDIT HOURS</label></td>
+                    <td><input type="text" id="credit3" required></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="submark3">MARKS</label></td>
+                    <td><input type="text" id="submark3" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="title">
+                        <button type="button" onclick="calmessage()" id="calculate">CALCULATE</button>
+                        <input type="reset" value="RESET" id="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="form2">
+        <form method="get" action="marks.html">
+            <table border="1" id="table" cellpadding="6" cellspacing="0">
+                <tr>
+                    <td id="label"><label for="subcode">SUBJECT CODE</label></td>
+                    <td id="label"><label for="subname">SUBJECT NAME</label></td>
+                    <td id="label"><label for="credit">CREDIT HOURS</label></td>
+                    <td id="label"><label for="submark">MARKS</label></td>
+                    <td id="label"><label for="grade">GRADE</label></td>
+                </tr>
+                <tr>
+                    <td id="discode"></td>
+                    <td id="disname"></td>
+                    <td id="discredit"></td>
+                    <td id="dismark1"></td>
+                    <td id="disgrade"></td>
+                </tr>
+                <tr>
+                    <td id="discode2"></td>
+                    <td id="disname2"></td>
+                    <td id="discredit2"></td>
+                    <td id="dismark2"></td>
+                    <td id="disgrade2"></td>
+                </tr>
+                <tr>
+                    <td id="discode3"></td>
+                    <td id="disname3"></td>
+                    <td id="discredit3"></td>
+                    <td id="dismark3"></td>
+                    <td id="disgrade3"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" rowspan="2" id="totalmark">
+                        TOTAL MARK
+                    </td>
+                </tr>
+                <tr>
+                  <td colspan="2" id="distotal"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" rowspan="2" id="averagemark">
+                        AVERAGE MARK
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="disaverage"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="5">
+                        <input type="submit" value="Back" id="back">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="function.js"></script>
 </body>
 </html>
